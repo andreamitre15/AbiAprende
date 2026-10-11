@@ -1,0 +1,79 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #e5f9f8, #fff9f0);
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px 16px 80px;
+}
+
+.instruccion {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border: 3px solid #4ECDC4;
+  box-shadow: 0 4px 15px rgba(78,205,196,0.2);
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: slide-up 0.4s ease both;
+}
+.card:hover { transform: scale(1.04); }
+.card:active { transform: scale(0.96); }
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.palabraTexto {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem;
+  color: #4ECDC4;
+  letter-spacing: 2px;
+}
+
+.letrasAnimadas {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.letraAnim {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  color: #FF69B4;
+  animation: pop-in 0.4s ease both;
+  display: inline-block;
+}
+
+@keyframes pop-in {
+  0% { transform: scale(0) translateY(-10px); opacity: 0; }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}

@@ -1,0 +1,110 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f5e5f5, #fff9f0);
+}
+
+.main {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px 16px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.progresoBarra {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.progresoItem {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  color: #bbb;
+  transition: all 0.3s;
+}
+
+.progresoHecho {
+  background: #eafaf1;
+  border-color: #27ae60;
+  color: #27ae60;
+  font-size: 1.1rem;
+}
+
+.progresoActual {
+  border-color: currentColor;
+  background: white;
+  color: #FF69B4;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0 3px rgba(255,105,180,0.2);
+  transform: scale(1.15);
+}
+
+.instruccion {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  color: #888;
+  text-align: center;
+}
+
+.letraLabel {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.canvas {
+  border: 4px solid;
+  border-radius: 24px;
+  background: white;
+  touch-action: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  cursor: crosshair;
+}
+
+.botones {
+  display: flex;
+  gap: 12px;
+}
+
+.btnLimpiar {
+  background: #f0f0f0;
+  color: #555;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btnLimpiar:hover { transform: scale(1.05); }
+
+.btnSiguiente {
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+.btnSiguiente:hover { transform: scale(1.05); }
+

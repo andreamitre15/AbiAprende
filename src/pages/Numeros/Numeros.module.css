@@ -1,0 +1,192 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fefae5, #fff9f0);
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px 16px 80px;
+}
+
+.instruccion {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  border: 3px solid #F7DC6F;
+  box-shadow: 0 4px 12px rgba(247,220,111,0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: slide-up 0.4s ease both;
+}
+.card:hover { transform: scale(1.04); }
+.card:active { transform: scale(0.96); }
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.num {
+  font-family: 'Fredoka One', cursive;
+  font-size: 3rem;
+  color: #F39C12;
+  line-height: 1;
+}
+
+.emojiCard { font-size: 1.5rem; }
+
+.nombreCard {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Vista detalle */
+.detalle, .actividad {
+  max-width: 400px;
+  margin: 24px auto;
+  padding: 32px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.numGrande {
+  font-family: 'Fredoka One', cursive;
+  font-size: 8rem;
+  color: #F39C12;
+  line-height: 1;
+  text-shadow: 3px 4px 0 rgba(243,156,18,0.2);
+  animation: bounce-in 0.5s ease;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.nombre {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #888;
+}
+
+.emojisWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  max-width: 280px;
+}
+
+.emojiItem {
+  font-size: 2rem;
+  animation: star-pop 0.4s ease both;
+}
+
+@keyframes star-pop {
+  0% { transform: scale(0); opacity: 0; }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.btnGroup {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btnVolver {
+  background: #f0f0f0;
+  color: #555;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btnVolver:hover { transform: scale(1.05); }
+
+.btnActividad {
+  background: linear-gradient(135deg, #F39C12, #FFD700);
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(243,156,18,0.3);
+  transition: transform 0.2s;
+}
+.btnActividad:hover { transform: scale(1.05); }
+
+/* Actividad */
+.pregunta {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  color: #F39C12;
+  text-align: center;
+}
+
+.opciones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.opcion {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  border: 3px solid #F7DC6F;
+  background: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: #F39C12;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.opcion:hover { transform: scale(1.08); }
+
+.opcionCorrecta {
+  background: #eafaf1;
+  border-color: #27ae60;
+  color: #27ae60;
+}
+.opcionWrong {
+  background: #fdf2f2;
+  border-color: #e74c3c;
+  color: #e74c3c;
+}
+
+.fbMal {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  color: #e74c3c;
+}

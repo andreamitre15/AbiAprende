@@ -1,0 +1,135 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fef5e7, #fff9f0);
+}
+
+.selector {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.instruccion {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5rem;
+  color: #F39C12;
+  text-align: center;
+}
+
+.modoBtn {
+  background: white;
+  border: 3px solid #FAD7A0;
+  border-radius: 20px;
+  padding: 18px 40px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.3rem;
+  color: #F39C12;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(250,215,160,0.3);
+  transition: transform 0.2s;
+  width: 100%;
+  max-width: 280px;
+}
+.modoBtn:hover { transform: scale(1.04); }
+
+.main {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 16px 16px 80px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.pares {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  color: #F39C12;
+}
+
+.btnCambiar {
+  background: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.85rem;
+  color: #888;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.btnCambiar:hover { transform: scale(1.04); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.carta {
+  aspect-ratio: 1;
+  border-radius: 14px;
+  border: 3px solid #FAD7A0;
+  background: linear-gradient(135deg, #FF69B4, #FFD700);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transform-style: preserve-3d;
+}
+.carta:hover:not(.cartaVoltada) {
+  transform: scale(1.05);
+}
+
+.cartaFrente, .cartaDorso {
+  position: absolute;
+  font-size: 1.8rem;
+  backface-visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.cartaFrente {
+  opacity: 0;
+}
+.cartaDorso {
+  opacity: 1;
+}
+
+.cartaVoltada .cartaFrente {
+  opacity: 1;
+}
+.cartaVoltada .cartaDorso {
+  opacity: 0;
+}
+
+.cartaVoltada {
+  background: white;
+  border-color: #45B7D1;
+  transform: scale(1.02);
+}
+
+.cartaEmparejada {
+  background: linear-gradient(135deg, #eafaf1, #d5f5e3);
+  border-color: #27ae60;
+  cursor: default;
+}
+
+@media (min-width: 480px) {
+  .grid {
+    gap: 14px;
+  }
+  .cartaFrente, .cartaDorso {
+    font-size: 2.2rem;
+  }
+}

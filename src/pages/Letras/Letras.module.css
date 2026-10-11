@@ -1,0 +1,121 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #fff9f0, #ffeef8);
+}
+
+.main {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px 16px 80px;
+}
+
+.instruccion {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 14px 8px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  animation: slide-up 0.4s ease both;
+}
+.card:hover { transform: scale(1.08); }
+.card:active { transform: scale(0.94); }
+
+@keyframes slide-up {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.letra {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+  line-height: 1;
+}
+
+.letraEmoji {
+  font-size: 1.2rem;
+}
+
+/* Vista detalle */
+.detalle {
+  max-width: 400px;
+  margin: 24px auto;
+  padding: 40px 24px;
+  border-radius: 30px;
+  text-align: center;
+  animation: bounce-in 0.5s ease;
+}
+
+@keyframes bounce-in {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.letraGrande {
+  font-family: 'Fredoka One', cursive;
+  font-size: 8rem;
+  line-height: 1;
+  text-shadow: 3px 5px 0 rgba(0,0,0,0.1);
+}
+
+.letraMin {
+  font-family: 'Fredoka One', cursive;
+  font-size: 5rem;
+  line-height: 1;
+  opacity: 0.7;
+  margin-top: -10px;
+}
+
+.emojiGrande {
+  font-size: 5rem;
+  margin: 16px 0;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.palabraEjemplo {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.3rem;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.btnVolver {
+  background: linear-gradient(135deg, #FF69B4, #FFD700);
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.2rem;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(255,105,180,0.3);
+  transition: transform 0.2s;
+}
+.btnVolver:hover { transform: scale(1.05); }
