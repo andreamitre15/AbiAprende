@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Letras from './pages/Letras/Letras';
 import Palabras from './pages/Palabras/Palabras';
@@ -12,7 +12,7 @@ import Recompensas from './pages/Recompensas/Recompensas';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/"            element={<Home />} />
         <Route path="/letras"      element={<Letras />} />
@@ -25,6 +25,6 @@ export default function App() {
         <Route path="/memoria"     element={<Memoria />} />
         <Route path="/recompensas" element={<Recompensas />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
